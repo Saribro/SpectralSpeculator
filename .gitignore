@@ -3,6 +3,7 @@
 *.lo
 *.o
 *.obj
+*.iobj
 
 # Precompiled Headers
 *.gch
@@ -26,6 +27,10 @@
 *.exe
 *.out
 *.app
+
+# Misc
+*.ipdb
+*.db
 
 # =========================
 # Operating System Files
