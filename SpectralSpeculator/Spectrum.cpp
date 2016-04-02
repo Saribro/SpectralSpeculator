@@ -49,7 +49,7 @@ double Spectrum::RadianceToTemperature(double radiance, double lStart, double lE
 void Spectrum::PlanckCurve(double x, double xminusa, double bminusx, double & y, void * arguments)
 {
     auto arg = reinterpret_cast<double *>(arguments);
-    y  = exp(h * c / (kb * x * arg[0])) - 1;
+    y  = expm1(h * c / (kb * x * arg[0]));  // equivalent of 'exp() - 1'
     y *= pow(x, 5.0f);
     y  = 2 * h * c * c / y;
 }
